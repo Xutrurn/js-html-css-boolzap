@@ -4,7 +4,32 @@
   box-sizing: border-box;
 }
 
+/* test */
+.lightgrey {
+  background-color: lightgrey;
+  height: 95%;
+}
+
+/* test */
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-width: 1100px;
+  background: linear-gradient(to top, #DADBD3 85%, #009688 15%);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  min-width: 1100px;
 }
