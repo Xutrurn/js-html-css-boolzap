@@ -14,15 +14,18 @@
   background-color: DarkSalmon;
 }
 
-.darkseagreen{
+.darkseagreen {
   background-color: DarkSeaGreen;
 }
 
 /************************** test */
-
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+}
+
+span {
+  font-size: 18px;
 }
 
 .big-container {
@@ -45,6 +48,39 @@ body {
 
 .col-left {
   width: 35%;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #EAEAEA;
+}
+
+.user-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+}
+
+.user-icon img {
+  height: 60px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 70px;
+}
+
+.icons i {
+  font-size: 26px;
+  color: #B1B1B1;
+  margin-right: 20px;
 }
 
 .col-right {
