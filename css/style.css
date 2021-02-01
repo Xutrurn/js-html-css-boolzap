@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/************************ test */
+/************************ utilities */
 .lightgrey {
   background-color: lightgrey;
   height: 95%;
@@ -18,7 +18,7 @@
   background-color: DarkSeaGreen;
 }
 
-/************************** test end */
+/************************** utilities end */
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -193,4 +193,29 @@ span {
 .col-right {
   width: 65%;
   border-left: 1px solid #D6D6D6;
+}
+
+.current-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #EAEAEA;
+}
+
+.info-current-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+}
+
+.info-current-contact img {
+  height: 60px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.info-current-contact p {
+  font-size: 14px;
+  color: #B1B1B1;
 }
