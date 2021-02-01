@@ -50,6 +50,7 @@ span {
   flex-direction: row;
   width: 80vw;
   min-width: 1100px;
+  margin: auto;
 }
 
 /************** Colonna Sinistra */
@@ -142,7 +143,7 @@ span {
   align-items: center;
   height: 35px;
   margin: 5px auto;
-  width: 90%;
+  width: 98%;
   background-color: #ffffff;
   border: .5px solid #f5f5f5;
 }
@@ -154,7 +155,7 @@ span {
 }
 
 .icon-input input {
-  height: 35px;
+  /* height: 35px; */
   width: 300px;
   border: none;
   outline: none;
@@ -275,4 +276,40 @@ span {
 .contact-messagge {
   background-color: #FFFFFF;
   clear: both;
+}
+
+.writing {
+  display: flex;
+  flex-direction: row;
+  background-color: #F3EEE9;
+}
+
+.smile, .input-text, .audio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.smile, .audio {
+  width: 70px;
+}
+
+.input-text {
+  width: calc(100% - 140px);
+}
+
+.smile a i, .audio a i {
+  font-size: 26px;
+  color: #6A7376;
+}
+
+.input-text input {
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
