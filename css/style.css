@@ -249,14 +249,14 @@ span {
 
 .current-chat-item ul li {
   width: 40%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .current-chat-item ul li p {
   font-size: 18px;
-  padding: 10px;
-  padding-bottom: 25px;
+  padding: 12px;
+  padding-bottom: 26px;
 }
 
 .current-chat-item ul li span {
@@ -267,14 +267,14 @@ span {
   float: right;
 }
 
-.sent-messagge {
+.sent {
   background-color: #D5F9BA;
   float: right;
   clear: both;
   word-break: break-all;
 }
 
-.received-messagge {
+.received {
   background-color: #FFFFFF;
   clear: both;
   word-break: break-all;

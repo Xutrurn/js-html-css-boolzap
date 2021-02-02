@@ -152,20 +152,30 @@ var app = new Vue({
           }
         ],
       },
-    ]
+    ],
+    contattoAttivo: 0
+
 
 
   },
+  // fine data
 
 
 
 
-
+  // inizio methods
   methods: {
-    saluta: function() {
-      return 'Ciao';
-    }
+    cambiaContatto: function(index) {
+      this.contattoAttivo = index
+      console.log(index);
+
+    },
+
+
+
+
   }
+  // fine methods
 
 });
 

@@ -57,7 +57,7 @@
         <!-- Riga Contatti -->
         <div class="contacts">
           <ul>
-            <li v-for="contact in contacts">
+            <li v-for="(contact, index) in contacts" @click="cambiaContatto(index)">
               <a href="#"><img :src="'img/avatar' + contact.avatar + '.jpg'" alt="avatar"><span>{{ contact.name }}</span></a>
             </li>
           </ul>
@@ -74,10 +74,10 @@
 
           <!-- Riga icona e info utente -->
           <div class="info-current-contact">
-            <img src="img/avatar_7.jpg" alt="avatar">
+            <img :src="'img/avatar' + contacts[contattoAttivo].avatar + '.jpg'" alt="avatar">
             <div>
-              <span>Nome Contatto</span>
-              <p>Ultimo accesso oggi alle</p>
+              <span>{{ contacts[contattoAttivo].name }}</span>
+              <p>Ultimo accesso oggi alle : </p>
             </div>
           </div>
           <div class="icons">
@@ -94,11 +94,15 @@
           <!-- Riga con gli oggetti per la chat -->
           <div class="current-chat-item">
             <ul class="clearfix">
-              <li class="clearfix sent-messagge">
+              <li class="clearfix sent">
                 <p>Testo messaggio 1</p>
                 <span>Data Messaggio</span>
               </li>
-              <li class="clearfix received-messagge">
+              <li class="clearfix sent">
+                <p>Testo messaggio 1</p>
+                <span>Data Messaggio</span>
+              </li>
+              <li class="clearfix received">
                 <p>Risposta messaggio 1</p>
                 <span>Data Messaggio</span>
               </li>
