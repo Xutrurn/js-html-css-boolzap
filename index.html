@@ -57,35 +57,8 @@
         <!-- Riga Contatti -->
         <div class="contacts">
           <ul>
-            <li>
-              <a href="#"><img src="img/avatar_1.jpg" alt="avatar"><span>Avatar 1</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_2.jpg" alt="avatar"><span>Avatar 2</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_3.jpg" alt="avatar"><span>Avatar 3</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_4.jpg" alt="avatar"><span>Avatar 4</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_5.jpg" alt="avatar"><span>Avatar 5</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_6.jpg" alt="avatar"><span>Avatar 6</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_7.jpg" alt="avatar"><span>Avatar 7</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_8.jpg" alt="avatar"><span>Avatar 8</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_4.jpg" alt="avatar"><span>Avatar 9</span></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/avatar_io.jpg" alt="avatar"><span>Avatar 10</span></a>
+            <li v-for="contact in contacts">
+              <a href="#"><img :src="'img/avatar' + contact.avatar + '.jpg'" alt="avatar"><span>{{ contact.name }}</span></a>
             </li>
           </ul>
         </div>
@@ -121,11 +94,11 @@
           <!-- Riga con gli oggetti per la chat -->
           <div class="current-chat-item">
             <ul class="clearfix">
-              <li class="clearfix my-messagge">
+              <li class="clearfix sent-messagge">
                 <p>Testo messaggio 1</p>
                 <span>Data Messaggio</span>
               </li>
-              <li class="clearfix contact-messagge">
+              <li class="clearfix received-messagge">
                 <p>Risposta messaggio 1</p>
                 <span>Data Messaggio</span>
               </li>

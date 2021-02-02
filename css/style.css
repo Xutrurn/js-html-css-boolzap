@@ -256,7 +256,7 @@ span {
 .current-chat-item ul li p {
   font-size: 18px;
   padding: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
 }
 
 .current-chat-item ul li span {
@@ -267,15 +267,18 @@ span {
   float: right;
 }
 
-.my-messagge {
+.sent-messagge {
   background-color: #D5F9BA;
   float: right;
   clear: both;
+  word-break: break-all;
 }
 
-.contact-messagge {
+.received-messagge {
   background-color: #FFFFFF;
   clear: both;
+  word-break: break-all;
+
 }
 
 .writing {
