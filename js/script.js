@@ -6,7 +6,7 @@ var app = new Vue({
     // oggetto user
     user: {
       name: 'Nome Qualunque',
-      avatar: 'img/avatar_5.jpg'
+      avatar: '_ioo'
     },
     // array oggetti contatti
     contacts: [{
@@ -154,7 +154,6 @@ var app = new Vue({
       },
     ],
     contattoAttivo: 0
-
 
 
   },
