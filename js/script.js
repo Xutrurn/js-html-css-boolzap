@@ -94,12 +94,12 @@ var app = new Vue({
         visible: true,
         messages: [{
             date: '10/01/2020 15:30:55',
-            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            text: 'Science-based Grape Pudding alongside Lukewarm Bass Roll',
             status: 'sent'
           },
           {
             date: '10/01/2020 15:50:00',
-            text: 'Si, ma preferirei andare al cinema',
+            text: 'Fire-Roasted Cambozola tossed with Carolina Jarlsberg and Oatmeal Flatbread',
             status: 'received'
           }
         ],
@@ -110,12 +110,12 @@ var app = new Vue({
         visible: true,
         messages: [{
             date: '10/01/2020 15:30:55',
-            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            text: 'Indoor Carrot Burger with a side of Black Truffle and Spinach',
             status: 'sent'
           },
           {
             date: '10/01/2020 15:50:00',
-            text: 'Si, ma preferirei andare al cinema',
+            text: 'Foamed Watermelon Jam atop Understated Yam Shish-Kebab',
             status: 'received'
           }
         ],
@@ -126,12 +126,12 @@ var app = new Vue({
         visible: true,
         messages: [{
             date: '10/01/2020 15:30:55',
-            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            text: 'Swiss Process Pulled Pork Muffins with Christmas Muskrat Cookies',
             status: 'sent'
           },
           {
             date: '10/01/2020 15:50:00',
-            text: 'Si, ma preferirei andare al cinema',
+            text: 'Seasonal Rutabaga Gravy hidden under Blackened Tofu and Mussel Soup',
             status: 'received'
           }
         ],
@@ -142,33 +142,60 @@ var app = new Vue({
         visible: true,
         messages: [{
             date: '10/01/2020 15:30:55',
-            text: 'Lo sai che ha aperto una nuova pizzeria?',
+            text: 'Highly Seasoned Sea Urchin Fondue topped with Baked Tamarind Foam',
             status: 'sent'
           },
           {
             date: '10/01/2020 15:50:00',
-            text: 'Si, ma preferirei andare al cinema',
+            text: 'Porcini and Cheddar Water in a mélange of Roman Scallop Brownies',
             status: 'received'
           }
         ],
       },
     ],
-    contattoAttivo: 0
+    contattoAttivo: 0,
 
+    giorno: dayjs().format("DD-MM-YYYY"),
+    ora: dayjs().format("HH:mm:ss"),
 
+    testoInserito: '',
   },
-  // fine data
 
 
 
 
   // inizio methods
   methods: {
-    cambiaContatto: function(index) {
-      this.contattoAttivo = index
-      console.log(index);
 
+    cambiaContatto(index) {
+      this.contattoAttivo = index
+      this.giorno = dayjs().format("DD-MM-YYYY")
+      this.ora = dayjs().format("HH:mm:ss")
     },
+
+    mioMessaggio() {
+      var testo = {
+        text: this.testoInserito,
+        date: dayjs().format("DD-MM-YYYY HH:mm:ss"),
+        status: 'sent'
+      };
+      this.contacts[this.contattoAttivo].messages.push(testo);
+      this.testoInserito = "";
+
+      setTimeout(function() {
+        var autoMessaggio = {
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+          text: 'ok',
+          status: 'received'
+        };
+        app.contacts[app.contattoAttivo].messages.push(autoMessaggio);
+      }, 1000);
+    },
+
+
+
+
+
 
 
 

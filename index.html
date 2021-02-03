@@ -60,7 +60,7 @@
         <div class="contacts">
           <ul>
             <li v-for="(contact, index) in contacts" @click="cambiaContatto(index)">
-              <a href="#"><img :src="'img/avatar' + contact.avatar + '.jpg'" alt="contacts.name"><span>{{ contact.name }}</span></a>
+              <a href="#"><img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contacts.name"><span>{{ contact.name }}</span></a>
             </li>
           </ul>
         </div>
@@ -79,7 +79,7 @@
             <img :src="'img/avatar' + contacts[contattoAttivo].avatar + '.jpg'" :alt="contacts.name">
             <div>
               <span>{{ contacts[contattoAttivo].name }}</span>
-              <p>Ultimo accesso oggi alle : </p>
+              <p>Ultimo accesso il {{ giorno }} alle {{ ora }}</p>
             </div>
           </div>
           <div class="icons">
@@ -110,7 +110,7 @@
             <a href="#"><i class="far fa-smile"></i></a>
           </div>
           <div class="input-text">
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input type="text" v-model="testoInserito" @keyup.enter="mioMessaggio" placeholder="Scrivi un messaggio">
           </div>
           <div class="audio">
             <a href="#"><i class="fas fa-microphone"></i></a>
@@ -122,7 +122,8 @@
     </div>
 
   </div>
-  <script src="js/moment-with-locales.min.js" charset="utf-8"></script>
+
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="js/script.js" charset="utf-8"></script>
 </body>
 
