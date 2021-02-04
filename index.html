@@ -52,14 +52,14 @@
         <div class="search">
           <div class="icon-input">
             <i class="fas fa-search"></i>
-            <input type="text" placeholder="Cerca o inizia una nuova chat">
+            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="cercaContatti" @keydown.enter="ricercaTestuale" @input="ricercaTestuale">
           </div>
         </div>
 
         <!-- Riga Contatti -->
         <div class="contacts">
           <ul>
-            <li v-for="(contact, index) in contacts" @click="cambiaContatto(index)">
+            <li v-for="(contact, index) in contacts" @click="cambiaContatto(index)" v-if="contact.visible">
               <a href="#"><img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contacts.name"><span>{{ contact.name }}</span></a>
             </li>
           </ul>

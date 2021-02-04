@@ -159,6 +159,7 @@ var app = new Vue({
     ora: dayjs().format("HH:mm:ss"),
 
     testoInserito: '',
+    cercaContatti: '',
   },
 
 
@@ -184,13 +185,24 @@ var app = new Vue({
 
       setTimeout(function() {
         var autoMessaggio = {
-          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
           text: 'ok',
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
           status: 'received'
         };
         app.contacts[app.contattoAttivo].messages.push(autoMessaggio);
       }, 1000);
     },
+
+    ricercaTestuale() {
+      this.contacts.forEach(
+        (contact, index) => {
+          if (contact.name.toLowerCase().includes(this.cercaContatti.toLowerCase())) {
+            contact.visible = true;
+          } else {
+            contact.visible = false;
+          }
+        });
+    }
 
 
 
